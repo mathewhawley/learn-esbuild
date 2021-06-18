@@ -2,6 +2,10 @@
   "name": "learn-esbuild",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "git config --local core.hooksPath .githooks"
+  },
+  "dependencies": {
+    "lint-staged": "11.0.0",
+    "prettier": "2.3.1"
   }
 }
