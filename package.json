@@ -2,11 +2,20 @@
   "name": "learn-esbuild",
   "private": true,
   "scripts": {
-    "prepare": "git config --local core.hooksPath .githooks"
+    "prepare": "git config --local core.hooksPath .githooks",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@types/react": "17.0.11",
     "@types/react-dom": "17.0.8",
+    "@typescript-eslint/eslint-plugin": "4.27.0",
+    "@typescript-eslint/parser": "4.27.0",
+    "eslint": "7.28.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-react-hooks": "4.2.0",
     "lint-staged": "11.0.0",
     "prettier": "2.3.1",
     "react": "17.0.2",
