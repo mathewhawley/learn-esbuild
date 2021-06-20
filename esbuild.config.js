@@ -1,5 +1,6 @@
 const path = require("path");
 const { serve, build } = require("esbuild");
+const cleanPlugin = require("./plugins/cleanPlugin");
 
 const args = process.argv.slice(2);
 
@@ -15,7 +16,7 @@ const paths = {
 
 const buildOptions = {
   entryPoints: {
-    bundle: path.join(paths.src, "main.tsx"),
+    bundle: path.join(paths.src, "index.tsx"),
   },
   entryNames: flags.prod ? "[name].[hash]" : "[name]",
   chunkNames: flags.prod ? "[name].[hash]" : "[name]",
@@ -27,6 +28,7 @@ const buildOptions = {
   incremental: flags.serve,
   target: "es6",
   write: !flags.serve,
+  plugins: [cleanPlugin()],
 };
 
 const serveOptions = { host: "localhost", port: 8000 };

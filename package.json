@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "prepare": "git config --local core.hooksPath .githooks",
+    "prebuild:prod": "tsc",
     "start": "node esbuild.config.js serve",
     "build:prod": "node esbuild.config.js prod",
     "build:dev": "node esbuild.config.js",
@@ -20,6 +21,7 @@
     "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
+    "glob": "7.1.7",
     "lint-staged": "11.0.0",
     "prettier": "2.3.1",
     "react": "17.0.2",
